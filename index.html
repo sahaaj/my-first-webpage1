@@ -14,13 +14,24 @@
                 <h1>Sahaaj's Blog<span class="color">.</span></h1>
                 <nav>
                     <ul id="abc">
-                        <li><a href="#">Home</a></li>
+                        <li><input type="search" placeholder="Search" id="search"></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+        <h3 id="Name" style="text-align:center;color:white"></h3>
+        <center>
+          <p style="width:40%;color:white;text-align:center">Welcome to our Blog page. Here you will find the experiences of various cities
+          across the globe so that you can decide where do you want to go NEXT. We also have videos
+        to give you virtual walkthroughs for the cities and last but not the least we also have a subscription
+      which is free of cost and by subscribing you can get all the details weekly on your Email Address. <strong>Thank You for visiting.</strong></p>
+        </center>
+
+        <p id="day" style="text-align:center;color:white"></p>
+        <p id="time" style="text-align:center;color:white"></p>
         <div id="hero-image">
             <div class="wrapper">
                 <h2>My <strong> Travel Blog.</strong><br/></h2>
@@ -32,23 +43,40 @@
                 <ul>
                     <li class="feature-1">
                         <img src="https://www.goway.com/media/uploads/australia_and_south_pacific/images/australia/sydney/cityscape_image_of_sydney,_australia_with_harbour_bridge_590390942.jpg" height="200" width="300" alt="">
-                        <h4>Austrailia</h4>
+                        <h4 style="color:white">Austrailia</h4>
                         <p>A great Country to visit and has great theme parks as well.</p>
                     </li>
                     <li class="feature-2">
                         <img src="https://www.tripsavvy.com/thmb/e2kX9LSXosCJp1LrjFtVtgn_zp4=/3500x2550/filters:fill(auto,1)/where-is-singapore-dcc07b5514284c58bea037a9b7344568.jpg" height="200" width="300" alt="">
-                        <h4>Singapore</h4>
+                        <h4 style="color:white">Singapore</h4>
                         <p>A small city but the varied cultures in that place make it very special.</p>
                     </li>
                     <li class="feature-3">
                         <img src="https://pullman.accor.com/destinations/country/thailand-1400x788-1.jpg" width="300" height="200" alt="">
-                        <h4>Thailand</h4>
+                        <h4 style="color:white">Thailand</h4>
                         <p>The goto place if you are looking for a chilling vacation.</p>
                     </li>
                     <div class="clear"></div>
                 </ul>
             </div>
         </div>
-        </footer>
+        <script type="text/javascript">
+          var a=new Date();
+          var Days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+          var day="Today is : "+Days[a.getDay()];
+          document.getElementById("day").innerHTML = day;
+          var hh=a.getHours();
+          var mm=a.getMinutes();
+          var ss=a.getSeconds();
+          var ap=a>=12?'PM':'AM'
+          hh=hh%12;
+          hh=hh?hh:12;
+          mm=mm<10?'0'+mm:mm;
+          ss=ss<10?'0'+ss:ss;
+          var Time="Time : "+String(hh)+" "+ap+" : "+mm+" : "+ss;
+          document.getElementById("time").innerHTML=Time;
+          var name=prompt("Please Enter your name","Sahaaj");
+          document.getElementById("Name").innerHTML="Welcome "+name+",";
+        </script>
     </body>
 </html>

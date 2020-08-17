@@ -10,9 +10,20 @@
 <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
 
 <body>
-  <br><br><br>
-  <h1 style="text-align:center;"><a style="color:red" href="index.html">Home.</a></h1>
-  <h1 id="Head">My Travelogue.</h1>
+  <header>
+      <div class="wrapper">
+          <h1>Sahaaj's Blog<span class="color">.</span></h1>
+          <nav>
+              <ul id="abc">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  <br><br>
+  <h1 id="Head" Style="text-align:center;">My Travelogue.</h1>
   <div class="blog">
     <div id="australia" href="https://www.australia.com/en-us" >
       <h2><strong><a href="https://www.australia.com/en-us" target="_blank" style="color:white;">Australia</a></strong></h2>
@@ -49,5 +60,24 @@
   <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AXAT3ZD3e5k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
     </center>
+    <hr>
+    <div class="sub">
+      <h2 style="margin-bottom:3px;font-size:30px; color:black;"><strong>Subscribe to My Blog by entering your details below</strong></h2>
+      <p style="color:black;">You will be receiving weekly updates on your email address or on your phone number by subscibing. There will be different cities covered in each edition.</p>
+      <form class="Subscribe" action="">
+        <input id="em" type="email" name="" placeholder="abc@example.com" style="width:200px;background-color:lightblue;border-radius:5px;"><br>
+        <input id="ph" type="tel" name="" placeholder="XXXXXXXXXX" style="width:200px;background-color:lightblue;border-radius:5px;"><br>
+        <button class="SUB" onclick="subscribe_blog()" type="submit">Subscribe</button><br>
+      </form>
+    </div>
+    <script type="text/javascript">
+      function subscribe_blog()
+      {
+        email=document.getElementById("em").value;
+        phone=document.getElementById("ph").value;
+        var msg="Thank you for subscribing to my blog. We have gotten your details. We will be mailing you regulary on your email address : "+email+" Thank you.";
+        alert(msg);
+      }
+    </script>
     </body>
 </html>

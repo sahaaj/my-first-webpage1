@@ -9,19 +9,54 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
 <body>
+  <header>
+      <div class="wrapper">
+          <h1>Sahaaj's Blog<span class="color">.</span></h1>
+          <nav>
+              <ul id="abc">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
   <div class="forms1">
-    <form class="forms" action="index.html" method="post">
+    <form class="forms" action="#" method="post">
       <label>Name:</label>
-      <input type="text" name="" value=""><br><br>
+      <input id="name" type="text" name="" value=""><br><br>
       <label for="">Phone Number</label>
-      <input type="tel" name="" value=""><br><br>
+      <input id="phone" type="tel" name="" value=""><br><br>
       <label for="">Email Address</label>
-      <input type="email" name="" value=""><br><br>
+      <input id="email" type="email" name="" value=""><br><br>
       <label for="">Enter your query:</label>
-      <textarea name="name" rows="5" cols="20"></textarea>
-
+      <textarea name="name" rows="5" cols="20"></textarea><br />
+      <button type="submit" class="contact" onclick="verify()">Submit.</button>
     </form>
   </div>
+  <script type="text/javascript">
+    function verify()
+    {
+      var name=document.getElementById("name").value;
+      var phone=String(document.getElementById("phone").value);
+      var email=document.getElementById("email").value;
+      if(name.length<=15){
+        if(phone.length<=10){
+          if(email.length<=40){
+            alert("Your message with your query has been received. We will get back to you shortly");
+          }
+          else {
+            alert("Email address very long");
+          }
+        }
+        else{
+          alert("Invalid Phone Number");
+        }
+      }
+      else {
+        alert("Name is very long");
+      }
+    }
+  </script>
 </body>
-
 </html>
